@@ -21,6 +21,8 @@ a {
 /* Components */
 body {
     background-image: url(images/background.gif);
+    background-size: cover;
+    padding: 50px 0;
 }
 .wrapper {
     background-color: #ddd;
@@ -70,6 +72,19 @@ body {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 20px;
+    color: deeppink;
+}
+
+.list li {
+    border-left: 5px solid #eaeaea;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.list li:hover {
+    border-color: pink;
+    color: pink;
 }
 
 .footer {
