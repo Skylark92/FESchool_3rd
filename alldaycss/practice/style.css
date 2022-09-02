@@ -1,0 +1,120 @@
+/* Reset 무엇을 초기화 해야 할까 */
+h1, p {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: initial;
+}
+
+dl {
+    margin-block: 0;
+}
+
+dd {
+    margin-inline: 0;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+/* Contents */
+/* Header */
+body {
+    background-image: url(images/background4.png);
+}
+.container {
+    background-color: #999;
+    width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url(images/background02.png);
+    background-repeat: none;
+    background-size: cover;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+}
+header img {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+header h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 16px;
+    width: fit-content;
+    margin: 10px auto;
+    border-top: 4px solid;
+    padding: 0 20px;
+}
+
+/* Main */
+main {
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+dl {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+    margin: 20px;
+    padding: 20px;
+}
+
+dl.information {
+    background-image: url(images/icon-information.png);
+}
+
+dl.skills {    
+    background-image: url(images/icon-skills.png);
+}
+
+dt {
+    font-size: 20px;
+    font-weight: bold;
+    color: deeppink;
+}
+
+dd {
+    border-left: 5px solid #eaeaea;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+dd:hover {
+    border-color: pink;
+    color: pink;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    border-radius: 50px;
+    border: 5px solid;
+    padding: 10px 20px;
+    margin: 20px auto;
+}
+
+a.github {
+    color: black;
+}
+
+a.facebook {
+    color: blue;
+}
+
+a.contact {
+    color: violet;
+}
