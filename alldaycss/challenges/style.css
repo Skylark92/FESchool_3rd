@@ -6,6 +6,10 @@ h1, p {
     font-weight: inherit;
 }
 
+img.animal, img.green {
+    vertical-align: top;
+}
+
 /* Contents */
 body {
     background-image: url(images/bg.png);
@@ -18,7 +22,7 @@ body {
 }
 
 /* Header */
-div.animal div.green {
+/* div.animal div.green {
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -30,7 +34,7 @@ div.animal {
 div.green {
     height: 50px;
     background-image: url(images/green.png);
-}
+} */
 
 /* Main */
 main.wrtie {

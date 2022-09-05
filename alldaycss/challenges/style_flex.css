@@ -19,8 +19,9 @@ body {
 
 /* Header */
 img.animal, img.green {
-    display: flex;
+    display: block;
 }
+
 /* div.animal div.green {
     background-repeat: no-repeat;
     background-size: contain;
