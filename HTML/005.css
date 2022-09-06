@@ -1,0 +1,13 @@
+/* Reset */
+h1,
+nav,
+article {
+    display: inline-block;
+}
+
+/* Header */
+header {
+    width: 1920px;
+    height: 101px;
+    top: 101px;
+}
