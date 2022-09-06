@@ -1,0 +1,18 @@
+/* Reset */
+h1, h2, h3, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Header */
+.logo {
+    width: 131px;
+    font-size: 24px;
+}
+
+.logo span{
+    width: 56px;
+    height: 4px;
+    background-color: yellow;
+}
+
