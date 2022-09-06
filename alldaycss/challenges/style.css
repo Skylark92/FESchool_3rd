@@ -1,12 +1,13 @@
 /* Reset */
-h1, p {
+h1,
+p {
     margin: initial;
     padding: initial;
     font-size: inherit;
     font-weight: inherit;
 }
 
-img.animal, img.green {
+img {
     vertical-align: top;
 }
 
@@ -21,31 +22,17 @@ body {
     margin: auto;
 }
 
-/* Header */
-/* div.animal div.green {
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-div.animal {
-    height: 300px;
-    background-image: url(images/animal07.png);
-}
-div.green {
-    height: 50px;
-    background-image: url(images/green.png);
-} */
-
 /* Main */
 main.wrtie {
     color: white;
-    background-color: #93572E;
+    background-color: #93572e;
     border-radius: 0 0 10% 10%;
-    box-shadow: 0 9px 0 0 #4A260B;
+    box-shadow: 0 9px 0 0 #4a260b;
     padding: 10px;
 }
 
-h1.name, p.explain {
+h1.name,
+p.explain {
     margin: 10px;
 }
 
