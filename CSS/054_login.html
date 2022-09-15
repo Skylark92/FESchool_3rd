@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weniv Login</title>
+        <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
+        <style>
+            * {
+                font-family: "Spoqa Han Sans Neo", "sans-serif";
+                font-size: 12px;
+                line-height: 15px;
+                color: #767676;
+            }
+            div.login_box {
+                position: relative;
+                width: 350px;
+                height: 140px;
+                border-radius: 5px;
+                border: 1px solid #dbdbdb;
+                background-color: white;
+            }
+            h1 {
+                width: 215px;
+                height: 15px;
+                position: absolute;
+                top: 19px;
+                left: 16px;
+                color: black;
+                font-weight: normal;
+            }
+            button.login_btn {
+                position: absolute;
+                top: 50px;
+                left: 16px;
+                width: 318px;
+                height: 40px;
+                background-color: #711bff;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                font-weight: 500;
+                vertical-align: top;
+            }
+            button img {
+                width: 64px;
+                height: 18px;
+                vertical-align: bottom;
+            }
+            a {
+                text-decoration: none;
+            }
+            img.icon_lock {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 106px;
+                left: 16px;
+            }
+            a.id_link {
+                position: absolute;
+                top: 107px;
+                left: 36px;
+            }
+            div.login_box::after {
+                content: "|";
+                position: absolute;
+                top: 107px;
+                left: 74px;
+            }
+            a.pass_link {
+                position: absolute;
+                top: 107px;
+                left: 82px;
+            }
+            img.icon_user {
+                position: absolute;
+                top: 106px;
+                left: 269px;
+                width: 16px;
+                height: 16px;
+            }
+            a.join_link {
+                position: absolute;
+                top: 107px;
+                left: 289px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login_box">
+            <h1>더 편리해진 위니브에 오신 것을 환영합니다.</h1>
+            <form action="">
+                <button class="login_btn"><img src="./weniv-logo.png" alt="로그인 버튼" />로그인</button>
+            </form>
+            <img class="icon_lock" src="./icon-lock.png" />
+            <a class="id_link" href="#">아이디</a>
+            <a class="pass_link" href="#">비밀번호 찾기</a>
+            <img class="icon_user" src="./icon-user.png" alt="#" />
+            <a class="join_link" href="#">회원가입</a>
+        </div>
+    </body>
+</html>

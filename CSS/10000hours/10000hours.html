@@ -9,10 +9,12 @@
         <link rel="stylesheet" href="css/10000hours.css" />
     </head>
     <body>
+        <!-- 페이지 제목(이미지) -->
         <header>
             <h1><img src="img/title.png" alt="1만 시간의 법칙" /></h1>
         </header>
         <main id="app">
+            <!-- 페이지 설명 -->
             <h2>"연습은 어제의 당신보다 당신을 더 낫게 만든다."</h2>
             <div class="whatis">
                 <p>
@@ -24,23 +26,27 @@
             <div class="todo">
                 <form action="post">
                     <label for="whatfor"> 나는 <input id="whatfor" type="text" placeholder="예) 프로그래밍" required /> 전문가가 될 것이다. </label><br />
-                    <label for="howlong"> 그래서 앞으로 매일 하루에 <input id="howlong" type="text" placeholder="예) 5시간" required /> 시간씩 훈련할 것이다. </label>
-                    <button class="btn_submit" type="submit">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
-                    <img src="img/click.png" alt="클릭!" />
+                    <label for="howlong"> 그래서 앞으로 매일 하루에<input id="howlong" type="text" placeholder="예) 5시간" required /> 시간씩 훈련할 것이다. </label>
                 </form>
             </div>
-            <div id="result" class="check_result">
-                <h2 class="blind">결과 확인</h2>
-                <p>당신은 <span id="expert">asdf</span> 전문가가 되기 위해서</p>
-                <p>대략 <span id="practice">asdf</span>일 이상 훈련하셔야 합니다! :)</p>
-                <button class="btn_go">훈련하러 가기 GO!GO!</button>
-                <button class="btn_share">공유하기</button>
+            <div class="btn_submit">
+                <button type="submit">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
+                <img class="btn_click" src="img/click.png" alt="클릭하세요!" />
             </div>
+            <section id="result" class="check_result">
+                <h2 class="blind">결과 확인</h2>
+                <p>당신은 <span id="expert"> </span> 전문가가 되기 위해서</p>
+                <p>대략 <span id="practice"> </span>일 이상 훈련하셔야 합니다! :)</p>
+                <div class="btn_result">
+                    <button class="btn_go">훈련하러 가기 GO!GO!</button>
+                    <button class="btn_share">공유하기</button>
+                </div>
+            </section>
         </main>
         <footer>
             <img class="weniv_logo" src="img/logo.png" alt="주식회사 위니브" />
             <small
-                >본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br />
+                >※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br />
                 수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.</small
             >
         </footer>
