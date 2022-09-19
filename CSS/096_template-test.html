@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas:
+            "header header header"
+            "aside1 main aside2"
+            "footer footer footer"
+            ;
+        }
+        header {
+            grid-area: header;
+            background-color: antiquewhite;
+        }
+        main {
+            grid-area: main;
+            background-color:yellowgreen;
+        }
+        .aside1 {
+            grid-area: aside1;
+            background-color: royalblue;
+        }
+        .aside2 {
+            grid-area: aside2;
+            background-color: coral;
+        }
+        footer {
+            grid-area: footer;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, reprehenderit consectetur facilis cumque repudiandae ex assumenda hic! Voluptatum ratione, rem totam provident repellendus itaque sapiente cupiditate distinctio eum non nulla.</main>
+    <aside class="aside1">aside1</aside>
+    <aside class="aside2">aside2</aside>
+    <footer>footer</footer>
+</body>
+</html>
