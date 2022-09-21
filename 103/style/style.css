@@ -1,5 +1,16 @@
 @charset 'utf-8';
 
+@keyframes 돌아 {
+    0% {
+        transform: translate(-50%, -50%) rotateY(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateY(360deg);
+    }
+}
+body {
+    background-color: black;
+}
 #app {
     width: 100vw;
     height: 100vh;
@@ -12,8 +23,9 @@
     height: 400px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateY(360deg);
+    animation: 돌아 10s linear infinite;
     transform-style: preserve-3d;
+    transition: 0.3s;
 }
 
 .list-item li {
@@ -23,6 +35,8 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    /* border: 5px solid brown; */
+    box-shadow: rgba(250, 170, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 170, 170, 0.3) 0px 18px 36px -18px inset;
 }
 
 .list-item li img {
@@ -32,23 +46,39 @@
 }
 
 .list-item li:nth-child(1) {
-    transform: rotateY(0) translateZ(calc(340px*7/3.14/2))
+    transform: rotateY(0) translateZ(calc(340px * 7 / 3.14 / 2));
 }
 .list-item li:nth-child(2) {
-    transform: rotateY(calc(360deg/7)) translateZ(calc(340px*7/3.14/2))
+    transform: rotateY(calc(360deg / 7)) translateZ(calc(340px * 7 / 3.14 / 2));
 }
 .list-item li:nth-child(3) {
-    transform: rotateY(calc(360deg/7*2)) translateZ(calc(340px*7/3.14/2))
+    transform: rotateY(calc(360deg / 7 * 2)) translateZ(calc(340px * 7 / 3.14 / 2));
 }
 .list-item li:nth-child(4) {
-    transform: rotateY(calc(360deg/7*3)) translateZ(calc(340px*7/3.14/2))
+    transform: rotateY(calc(360deg / 7 * 3)) translateZ(calc(340px * 7 / 3.14 / 2));
 }
 .list-item li:nth-child(5) {
-    transform: rotateY(calc(360deg/7*4)) translateZ(calc(340px*7/3.14/2))
+    transform: rotateY(calc(360deg / 7 * 4)) translateZ(calc(340px * 7 / 3.14 / 2));
 }
 .list-item li:nth-child(6) {
-    transform: rotateY(calc(360deg/7*5)) translateZ(calc(340px*7/3.14/2))
+    transform: rotateY(calc(360deg / 7 * 5)) translateZ(calc(340px * 7 / 3.14 / 2));
 }
 .list-item li:nth-child(7) {
-    transform: rotateY(calc(360deg/7*6)) translateZ(calc(340px*7/3.14/2))
+    transform: rotateY(calc(360deg / 7 * 6)) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
+.btn-stop {
+    display: block;
+    margin: auto;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-go {
+    display: block;
+    margin: auto;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }

@@ -1,25 +1,83 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인생은 회전목마</title>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-    <article id="app">
-        <h2>포켓몬 회전목마</h2>
-        <ul class="list-item">
-            <li><img src="https://raw.githubusercontent.com/nugurejeil/Sharingphoto/main/jammanbo.png" alt=""></li>
-            <li><img src="https://raw.githubusercontent.com/nugurejeil/Sharingphoto/main/ev.png?raw=true" alt=""></li>
-            <li><img src="https://raw.githubusercontent.com/nugurejeil/Sharingphoto/main/mobugi.png" alt=""></li>
-            <li><img src="https://raw.githubusercontent.com/nugurejeil/Sharingphoto/main/mazayoung.png?raw=true" alt=""></li>
-            <li><img src="https://raw.githubusercontent.com/nugurejeil/Sharingphoto/main/pulin.png" alt=""></li>
-            <li><img src="https://raw.githubusercontent.com/nugurejeil/Sharingphoto/main/weirdseed.png" alt=""></li>
-            <li><img src="https://raw.githubusercontent.com/nugurejeil/Sharingphoto/main/nyaong.png" alt=""></li>
-        </ul>
-    </article>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>인생은 회전목마</title>
+        <link rel="stylesheet" href="style/normalize.css" />
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <article id="app">
+            <h2>포켓몬 회전목마</h2>
+            <ul class="list-item">
+                <li>
+                    <img
+                        src="https://mblogthumb-phinf.pstatic.net/MjAyMTAxMjhfMTAx/MDAxNjExODI5NjYzOTY3.kK5i7KL2fi56AjS1ciYuUi6_w7w3926A5XfyYglNAlcg.V2KT9MvtXER5f9P_bw0f3y7XaIdgX3PvH9sx7G2lfyog.PNG.jrkimceo/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-01-28_%EC%98%A4%ED%9B%84_7.27.10.png?type=w800"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img
+                        src="https://w.namu.la/s/60ee3e666ec0d6b670daa642489161ffb39a110ea173483d745e0f1ae063d69c7932b1d921456d935f73e3f40d5624591494d0e6c296af8f6044076333ed62671c820b5eb9afa8954c4c6ffa6c5ac69a462fe4cd3e8e7a24cb58a8372b7423ee568d5606f74c28b05cd7c831030aec8f"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img
+                        src="https://w.namu.la/s/f528cd76a4779e30a704175fddbe86bcfac560b0f2085d604f128a1339811aa55d47e88330c83d418903b496d0992d2dab0083f5f96034277879fc6d262de86e4bf3a0883455bb5da27aa3fc44c19dcdee3fd47fd0c1b46af86fc2baa53e14605597fe90344fbc041f4e62fa40989d59"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img
+                        src="https://w.namu.la/s/6f990fa993da4a052bcaeb0ab4f3fdfd1c7d4d4d422adb8e71ca8f4f30e29bd0e3fffbfffc0760904ebbbd8c6c0789b0967b216435f9f20e84310f8e6d4a9eb9a0a3d995f0db4479726d4b1a951b9a2e7b6376dee99f4b10bab4999c67c8fe3383338b834744166805a8813fa4ed4031"
+                        alt=""
+                    />
+                </li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1024px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg" alt="" /></li>
+                <li>
+                    <img
+                        src="https://w.namu.la/s/5d60486d2a6656c29801bbf52b293c2159d4b369be748bdb559fbd79787e9c83665e4865316b74422e9b861ce4873d1fb0d2c15741d77cc4be0405d961256f87457b97032bc8f5fb2be53a787c3be067419ac8cf0a56590a9bf5db9eba64620a580b48bf890b499f29ad32149ce82aea"
+                        alt=""
+                    />
+                </li>
+                <li><img src="http://image.chosun.com/sitedata/image/201408/25/2014082502198_0.jpg" alt="" /></li>
+            </ul>
+            <button class="btn-stop">STOP</button>
+            <button class="btn-go">GO</button>
+            <button class="btn-speed">FAST</button>
+        </article>
+
+        <script>
+            const center = document.querySelector(".list-item");
+            const items = document.querySelectorAll(".list-item li");
+            const stopbtn = document.querySelector(".btn-stop");
+            const gobtn = document.querySelector(".btn-go");
+            const fastbtn = document.querySelector(".btn-speed");
+            const angle = 360 / items.length;
+            let currAngle = 0;
+
+            document.addEventListener("click", function (event) {
+                if (window.innerWidth / 2 < event.clientX) {
+                    currAngle += angle;
+                } else {
+                    currAngle -= angle;
+                }
+
+                center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+            });
+
+            stopbtn.onclick = () => {
+                center.style.animationPlayState = "paused";
+            };
+            gobtn.onclick = () => {
+                center.style.animationPlayState = "running";
+            };
+            fastbtn.onclick = () => {
+                center.style.animation = "돌아 0.3s linear infinite";
+            };
+        </script>
+    </body>
 </html>
