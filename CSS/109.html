@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Title</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            video {
+                /* width: 100%; */
+                /* max-width: 100%; */
+            }
+            /* padding-top, padding-bottom의 %값은 부모 요소 넓이에 비례한다. */
+            .cont-video {
+                position: relative;
+                /* padding-top: 56.25%; */
+                /* height: 56.25vh; */
+                width: 100%;
+                height: 100%;
+            }
+
+            .video-next-level {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                /* padding-top: 56.25%; */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <video src="nextlevel.mp4"></video> -->
+        <section>
+            <article class="cont-video">
+                <iframe
+                    width="1280"
+                    height="720"
+                    src="https://www.youtube.com/embed/SNpuKLfv1EE"
+                    title="BTOB(비투비) - 괜찮아요 (It's Okay) Official Music Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    class="video-next-level"
+                ></iframe>
+            </article>
+        </section>
+    </body>
+</html>
