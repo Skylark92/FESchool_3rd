@@ -1,0 +1,27 @@
+article.calendar {
+  background: dodgerblue;
+}
+article.calendar .header-calendar {
+  background: yellowgreen;
+  display: flex;
+  flex-direction: row;
+}
+article.calendar .wrapper-calendar-section {
+  background: violet;
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+}
+article.calendar .wrapper-calendar-section section {
+  background: orangered;
+  width: 344px;
+  display: flex;
+  flex-direction: column;
+}
+article.calendar .wrapper-calendar-section section .wrapper-section-contents {
+  padding-left: 22px;
+}
+article.calendar .wrapper-calendar-section section .wrapper-section-contents .anchor-sns img {
+  border: 4px solid white;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */

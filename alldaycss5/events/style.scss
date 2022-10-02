@@ -1,0 +1,32 @@
+article.calendar {
+    background: dodgerblue;
+    .header-calendar {
+        background: yellowgreen;
+        display: flex;
+        flex-direction: row;
+    }
+    .wrapper-calendar-section{
+        background: violet;
+        display: flex;
+        flex-direction: row;
+        gap: 22px;
+        section {
+            background: orangered;
+            width: 344px;
+            display: flex;
+            flex-direction: column;
+            .wrapper-section-contents {
+                padding-left: 22px;
+                a {
+                }
+                .anchor-sns {
+                    img {
+                        border: 4px solid white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
