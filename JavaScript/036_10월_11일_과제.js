@@ -43,10 +43,49 @@ for (i = 0; i < data3.length; i++) {
     }
 }
 
-/* 연습문제 4. */
-let input4 = prompt('숫자를 입력해주세요');
+console.log(sum3);
 
-let result4 = '';
-for (i = 1; i < input4.length; i++) {
-    input4[-i]
+/* 연습문제 4. */
+let input4 = prompt("숫자를 입력해주세요.").split("").reverse();
+
+// 반복문만 사용하여 숫자단위 콤마 찍기
+let result4 = [];
+
+for (i = 0; i < input4.length; i++) {
+    if (i !== 0 && i % 3 === 0) {
+        result4.push(",");
+    }
+    result4.push(input4[i]);
+}
+
+console.log(result4.reverse().join(""));
+
+// 반복문만 사용하여 숫자단위 콤마 없애기
+
+let 숫자 = prompt("숫자를 콤마로 구분하여 입력해주세요.").split("");
+
+console.log(숫자.filter((a) => a !== ",").join(""));
+
+// 문자열 뒤집기
+
+let 문자열 = prompt("문자열을 입력해주세요.");
+
+console.log(문자열.split("").reverse().join(""));
+
+/* 연습문제 5. */
+// 로또 만들기
+
+const 번호 = [];
+
+function getLotto(c) {
+    let 추첨 = 0;
+    for (i = 0; i < c; i++) {
+        추첨 = Math.floor(Math.random() * 46) + 1;
+        if (번호.includes(추첨)) {
+            i--;
+            continue;
+        } else {
+            번호.push(추첨);
+        }
+    }
 }
