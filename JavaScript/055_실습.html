@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>055 실습</title>
+        <style>
+            .box {
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+            }
+            .default {
+                background: black;
+            }
+            .red {
+                background: red;
+            }
+            .yellow {
+                background: yellow;
+            }
+            .green {
+                background: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box default"></div>
+        <ul>
+            <li><button type="button">빨강</button></li>
+            <li><button type="button">노랑</button></li>
+            <li><button type="button">초록</button></li>
+        </ul>
+
+        <script>
+            const box = document.querySelector(".box");
+            const btnRed = document.querySelectorAll("li")[0];
+            const btnYellow = document.querySelectorAll("li")[1];
+            const btnGreen = document.querySelectorAll("li")[2];
+
+            btnRed.addEventListener("click", getRed);
+            btnYellow.addEventListener("click", getYellow);
+            btnGreen.addEventListener("click", getGreen);
+
+            function getRed() {
+                box.classList.remove("yellow");
+                box.classList.remove("green");
+                box.classList.add("red");
+            }
+            function getYellow() {
+                box.classList.add("yellow");
+                box.classList.remove("green");
+            }
+            function getGreen() {
+                box.classList.add("green");
+            }
+        </script>
+    </body>
+</html>
