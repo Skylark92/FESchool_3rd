@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>나의 todo list</h1>
+        <p>1. 오늘 저녁에는 부대찌개를 끓여 먹겠다. <button type="button">삭제</button></p>
+        <p>2. 후식으로 슈팅스타를 먹겠다. <button type="button">삭제</button></p>
+        <p>3. 자기 전에 반드시 내일 아침 메뉴를 생각해두겠다. <button type="button">삭제</button></p>
+
+        <script>
+            const pDom = document.querySelectorAll("p");
+            const btnDom = document.querySelectorAll("button");
+            console.log(pDom, btnDom);
+
+            pDom.forEach((p) => {
+                p.addEventListener("click", () => {
+                    alert(event.target.textContent.slice(0, -2));
+                });
+            });
+
+            btnDom.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    console.log(btn.outerHTML);
+                    confirm("삭제 하시겠습니까?") ? btn.parentElement.remove() : console.log(false);
+                    event.stopPropagation();
+                    event.preventDefault();
+                });
+            });
+        </script>
+
+        <!-- 마우스 오른쪽 클릭을 제한하는 이벤트 -->
+        <!-- <script>
+            window.addEventListener("contextmenu", () => {
+                console.log("clicked");
+                event.preventDefault();
+                alert("오른쪽 클릭 금지 !!");
+            });
+        </script> -->
+    </body>
+</html>
