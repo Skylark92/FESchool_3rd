@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>실습스</title>
+        <style>
+            @keyframes 오른쪽 {
+                100% {
+                    transform: translateX(1px);
+                }
+            }
+            #snake {
+                width: 50px;
+                height: 50px;
+                background: dodgerblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="snake"></div>
+        <script>
+            const snake = document.querySelector("#snake");
+            let pos = 0;
+
+            // 사용자가 누르는 키의 상태를 저장하는 객체
+            let keys = {};
+
+            function move(event) {
+                keys[event.key] = true;
+            }
+
+            function stop(event) {
+                keys[event.key] = false;
+            }
+
+            addEventListener("keydown", move);
+            addEventListener("keyup", stop);
+
+            function play() {
+                if (keys.ArrowRight) {
+                    pos += 5;
+                    snake.style.transform = `translateX(${pos}px)`;
+                }
+
+                if (keys.ArrowLeft) {
+                    pos -= 5;
+                    snake.style.transform = `translateX(${pos}px)`;
+                }
+                console.log("play!");
+
+                window.requestAnimationFrame(play);
+            }
+
+            window.requestAnimationFrame(play);
+
+            // let pos = 0;
+
+            // addEventListener("keydown", (event) => {
+            //     move(event);
+            // });
+
+            // function move(event) {
+            //     const keyName = event.key;
+            //     if (keyName === "ArrowRight") {
+            //         pos += 5;
+            //         snake.style.transform = `translateX(${pos}px)`;
+            //     }
+            //     if (keyName === "ArrowLeft") {
+            //         pos -= 5;
+            //         snake.style.transform = `translateX(${pos}px)`;
+            //     }
+            // }
+        </script>
+    </body>
+</html>
